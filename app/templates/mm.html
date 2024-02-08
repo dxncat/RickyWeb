@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block titulo %} RickyWeb - Inicio {% endblock %}
+{% block por_fuera %}
+<br>
+<br>
+<br>
+<br>
+<h1 style="text-align: center; color: #9bafcd;margin-bottom: -3rem;">PERSONAJES ENCONTRADOS: {{ personajes | length }}</h1>
+{% endblock %}
+{% block contenido %}
+<div class="gridc">
+    {% for personaje in personajes %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src={{  personaje.image }} alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ personaje.name }}</h5>
+            <div style="display: flex; flex-direction: row;">
+                <p class="card-text">episodios: {{ personaje['episode'] | length }}</p>
+                {% if  personaje.status == "Alive" %}
+                    <p class="card-text text-success" style="margin-left: 25px;">{{ personaje.status }}</p>
+                {% elif  personaje.status == "unknown" %}
+                    <p class="card-text text-warning" style="margin-left: 25px;">{{ personaje.status }}</p>
+                {% else %}
+                    <p class="card-text text-danger" style="margin-left: 25px;">{{ personaje.status }}</p>
+                {% endif %}
+            </div>
+            <p class="card-text">ORIGEN: {{ personaje.origin['name'] }}</p>
+            <p class="card-text">Ultima vez visto en: {{ personaje.location['name'] }}</p>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

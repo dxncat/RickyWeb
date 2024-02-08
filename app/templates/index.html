@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block titulo %} RickyWeb - Inicio {% endblock %}
+{% block contenido %}
+<div style="flex-direction: row;">
+    <h1 class="text-center">Lista de personajes</h1>
+    <br>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Raza</th>
+                <th>Genero</th>
+                <th>Origen</th>
+                <th>Episodios</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for personaje in personajes %}
+            <tr>
+                <td>
+                    {{ personaje.name }}
+                </td>
+                {% if  personaje.status == "Alive" %}
+                    <td class="text-success">
+                        {{ personaje.status }}
+                    </td>
+                {% elif  personaje.status == "unknown" %}
+                    <td class="text-warning">
+                        {{ personaje.status }}
+                    </td>
+                {% else %}
+                    <td class="text-danger">
+                        {{ personaje.status }}
+                    </td>
+                {% endif %}
+                <td>
+                    {{ personaje.species }}
+                </td>
+                <td>
+                    {{ personaje.gender }}
+                </td>
+                <td>
+                    {{ personaje['origin']['name'] }}
+                </td>
+                <td>
+                    {{ personaje['episode'] | length }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>
+                    numero de personajes {{ personajes | length }}
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+{% endblock %}

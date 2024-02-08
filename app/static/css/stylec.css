@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',  sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(45, 46, 53, 0.9), rgba(45, 46, 53, 0.9)), url(../img/3581516.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#table{
+    background: transparent;
+}
+
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+::placeholder{
+    color: #cac7ff;
+}
+
+.search-bar button img{
+    width: 25px;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    cursor: pointer;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header nav{
+    order: 1;
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.header .nav-links li:nth-child(1){
+    padding: 0 20px 0 0;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: #212529;
+    text-decoration: none;    
+}
+
+.header .nav-links li a:hover{
+    color: #9bafc1;
+}
+
+.header .btn{
+    order: 2;
+}
+
+.header .btn button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #212529;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: #414248;
+    color: #9bafc1;
+    transform: scale(1.1);
+}
+.gridc {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
