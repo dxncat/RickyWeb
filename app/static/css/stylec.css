@@ -142,3 +142,47 @@ body{
     grid-gap: 15px;
     grid-template-columns: repeat(4, 1fr);
 }
+
+@media (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+#error-page .content{
+    margin-top: 5%;
+    margin-left: 33%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background: transparent;
+    align-items: center;
+}
+
+.content{
+    max-width: 600px;
+    text-align: center;
+}
+.content h2.heder{
+    color: #eceff1;
+    font-size: 18vw;
+    line-height: 1em;
+}
+.content h4{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #bfccd8;
+    font-size: 2em;
+    max-width: 600px;
+}
+.content p{
+    font-size: 1.2em;
+    color: #bfccd8;
+}
+

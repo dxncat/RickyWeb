@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %} RickyWeb - Busqueda {% endblock %}
+{% block contenido %}
+<div id="error-page">
+    <div class="content">
+        <h2 class="heder" data-text="404">
+            404
+        </h2>
+        <h4 data-text="Opps! Page not found">
+            Opps! No se encontraron personajes
+        </h4>
+        <p>
+            intenta colocando su nombre en ingles!
+        </p>
+        <form action="/search" class="search-bar" method="post">
+            <input type="text" name="name" placeholder="Busca aqui a tu personaje favorito">
+            <button type="submit"><img src="../static/img/search.png"></button>
+        </form>
+</div>
+{% endblock %}

@@ -20,8 +20,7 @@ def paises():
             personajes = loads(get(f'https://rickandmortyapi.com/api/character/?name={request.form["name"]}').text)['results']
             return render_template('mm.html', personajes=personajes)
         except:
-            flash('PERSONAJE NO ENCONTRADO!')
-            return render_template('mm.html')
+            return render_template('404.html')
     else:
         return render_template('search.html')
 

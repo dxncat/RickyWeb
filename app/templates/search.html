@@ -1,8 +1,10 @@
 {% extends "base.html" %}
-{% block titulo %} RickyWeb - busqueda {% endblock %}
+{% block titulo %} RickyWeb - Busqueda {% endblock %}
 {% block contenido %}
+<div class="container">
 <form action="/search" class="search-bar" method="post">
-    <input type="text" name="name" placeholder="Busca aqui a tu personaje favorito (en ingles)">
+    <input type="text" name="name" placeholder="Busca aqui a tu personaje favorito">
     <button type="submit"><img src="../static/img/search.png"></button>
 </form>
+</div>
 {% endblock %}

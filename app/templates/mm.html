@@ -1,13 +1,12 @@
 {% extends "base.html" %}
-{% block titulo %} RickyWeb - Inicio {% endblock %}
-{% block por_fuera %}
+{% block titulo %} RickyWeb - Busqueda {% endblock %}
+{% block contenido %}
 <br>
 <br>
 <br>
 <br>
 <h1 style="text-align: center; color: #9bafcd;margin-bottom: -3rem;">PERSONAJES ENCONTRADOS: {{ personajes | length }}</h1>
-{% endblock %}
-{% block contenido %}
+<div class="container">
 <div class="gridc">
     {% for personaje in personajes %}
     <div class="card" style="width: 18rem;">
@@ -29,5 +28,6 @@
         </div>
     </div>
 {% endfor %}
+</div>
 </div>
 {% endblock %}
